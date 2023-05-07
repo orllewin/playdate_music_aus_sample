@@ -23,21 +23,32 @@ playdate.display.setInverted(inverted)
 local font = playdate.graphics.font.new("Fonts/font-rains-1x")
 playdate.graphics.setFont(font)
 
-local menu = playdate.getSystemMenu()
-local menuItem, error = menu:addMenuItem("Item 1", function()
-		print("Item 1 selected")
-end)
-
-local playDialog = PlayDialog()
-
 local chooserDialog = ChooserDialog(function(patch) 
 	showPatch(patch)
 end)
 chooserDialog:show()
 
+local menu = playdate.getSystemMenu()
+local menuItem, error = menu:addMenuItem("Patches", function()
+		if playDialog ~= nil and playDialog:isShowing() then 
+			playDialog:dismiss() 
+			playDialog = nil
+			playDialog = PlayDialog()
+		end
+		chooserDialog = ChooserDialog(function(patch) 
+			showPatch(patch)
+		end)
+		chooserDialog:show()
+end)
+
+local playDialog = PlayDialog()
+
+
+
 function showPatch(patch)
 	print("main.lua - patch chosen: " .. patch.path)
 	chooserDialog:dismiss()
+	chooserDialog = nil
 	playDialog:show(patch.path)
 end
 

@@ -66,6 +66,12 @@ A transition is a special type that allows you to build up a full set with diffe
 }
 ```
 
+## The future: USB
+
+[github.com/jaames/playdate-reverse-engineering/blob/main/usb/usb.md](https://github.com/jaames/playdate-reverse-engineering/blob/main/usb/usb.md)
+
+<hr>
+
 ## Image Asset Attribution
 
 [thenounproject.com/coquet_adrien/](https://thenounproject.com/coquet_adrien/)
