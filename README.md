@@ -1,4 +1,8 @@
-# Drum
+# Beetroot
+
+![](./Source/Images/card.png)
+
+A live drum machine for Playdate.
 
 ## Creating New Patches
 
