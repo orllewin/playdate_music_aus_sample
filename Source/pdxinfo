@@ -1,0 +1,7 @@
+name=Beetroot
+author=Orllewin
+description=A drum machine.
+bundleID=orllewin.playdate.beetroot
+version=1.0.0
+buildNumber=1
+imagePath=Images/card.png

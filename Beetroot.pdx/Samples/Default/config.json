@@ -1,0 +1,96 @@
+{
+	"columns": 4,
+	"rows": 3,
+	"samples": [
+		{
+			"title": "Again",
+			"path": "/Samples/Default/happening_again",
+			"type": "file",
+			"mode": "play",
+			"image": "/Images/voicemail"
+		},
+		{
+			"title": "BrknLoop4",
+			"path": "/Samples/Default/broken_loop_04",
+			"type": "file",
+			"mode": "loop",
+			"image": "/Images/mask"
+		},
+		{
+			"title": "TapeLoop3",
+			"path": "/Samples/Default/tape_loop_03",
+			"type": "file",
+			"mode": "loop",
+			"image": "/Images/recycle"
+		},
+		{
+			"title": "TapeLoop8",
+			"path": "/Samples/Default/tape_loop_08",
+			"type": "file",
+			"mode": "loop",
+			"image": "/Images/bomb"
+		},
+		{
+			"title": "TapeLoop17",
+			"path": "/Samples/Default/tape_loop_17",
+			"type": "file",
+			"mode": "hit",
+			"key": "up",
+			"image": "/Images/up"
+		},
+		{
+			"title": "TapeLoop20",
+			"path": "/Samples/Default/tape_loop_20",
+			"type": "file",
+			"mode": "loop",
+			"key": "right",
+			"image": "/Images/right"
+		},
+		{
+			"title": "Kick18",
+			"path": "/Samples/Default/kick_18",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/fish_bone"
+		},
+		{
+			"title": "Kick21",
+			"path": "/Samples/Default/kick_21",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/heartbeat"
+		},
+		{
+			"title": "Snare13",
+			"path": "/Samples/Default/snare_13",
+			"type": "sample",
+			"mode": "hit",
+			"key": "left",
+			"image": "/Images/left"
+		},
+		{
+			"title": "Snare24",
+			"path": "/Samples/Default/snare_24",
+			"type": "sample",
+			"mode": "hit",
+			"key": "down",
+			"image": "/Images/down"
+		},
+		{
+			"title": "Perc04",
+			"path": "/Samples/Default/perc_04",
+			"type": "sample",
+			"mode": "hit",
+			"key": "b",
+			"image": "/Images/b"
+		},
+		{
+			"title": "Perc08",
+			"path": "/Samples/Default/perc_08",
+			"type": "sample",
+			"mode": "hit",
+			"key": "a",
+			"image": "/Images/a"
+		}
+	]
+}

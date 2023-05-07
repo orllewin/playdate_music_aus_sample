@@ -1,0 +1,273 @@
+{
+	"label": "Maximal",
+	"columns": 4,
+	"rows": 5,
+	"samples": [
+	{
+		"title": "Polysyn",
+		"path": "/Samples/happening_again",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 01",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 02",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 03",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 04",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 05",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 06",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 07",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 08",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 09",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 10",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 11",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 12",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 13",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 14",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 15",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 16",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 17",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 18",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 19",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 20",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 21",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 22",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Kick/Kick 23",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 01",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 01",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 02",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 03",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 04",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 05",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 06",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 07",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 08",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 09",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 09",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 09",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 09",
+		"type": "sample",
+		"mode": "hit"
+
+	},
+	{
+		"title": "Polysyn",
+		"path": "/Samples/Snare/Snare 09",
+		"type": "sample",
+		"mode": "hit"
+
+	}
+	]
+}

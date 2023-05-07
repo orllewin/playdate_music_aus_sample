@@ -1,0 +1,116 @@
+{
+	"label": "100bpm loops",
+	"columns": 3,
+	"rows": 4,
+	"samples": [
+		{
+			"title": "001",
+			"path": "/Samples/Loops/100/Cut up loop 01 (100BPM)",
+			"type": "file",
+			"mode": "loop",
+			"volume": 0.75,
+			"image": "/Images/happy_jellyfish1",
+			"pitch": 1
+		},
+		{
+			"title": "002 - Hook",
+			"path": "/Samples/Loops/100/Bass 37 (100BPM)",
+			"type": "file",
+			"mode": "loop",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "003",
+			"path": "/Samples/Loops/100/Bonus Beat 06 (100BPM)",
+			"type": "file",
+			"mode": "loop",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "004",
+			"path": "/Samples/Loops/100/Synth Loop 01 (100BPM)",
+			"type": "file",
+			"mode": "loop",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "005",
+			"path": "/Samples/Loops/100/Beat 03a Hook (100BPM)",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/up",
+			"key": "up",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "006",
+			"path": "/Samples/Loops/100/Bonus Beat 26 (100BPM)",
+			"type": "file",
+			"mode": "loop",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "007",
+			"path": "/Samples/Loops/100/Beat 02b (100BPM)",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/left",
+			"key": "left",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "008",
+			"path": "/Samples/Loops/100/DMX Beat 07 (100BPM)",
+			"type": "file",
+			"mode": "loop",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "009",
+			"path": "/Samples/Loops/100/Bonus Beat 07 (100BPM)",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/right",
+			"key": "right",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "010",
+			"path": "/Samples/Loops/100/Piano loop 03 (100BPM)",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/b",
+			"volume": 0.75,
+			"key": "b",
+			"pitch": 1
+		},
+		{
+			"title": "011",
+			"path": "/Samples/Loops/100/Bonus Beat 08 (100BPM)",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/down",
+			"key": "down",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"title": "012",
+			"path": "/Samples/Loops/100/Piano loop 02 (100BPM)",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/a",
+			"volume": 0.75,
+			"key": "a",
+			"pitch": 1
+		}
+	]
+}
