@@ -54,7 +54,7 @@ Example sample object:
 
 ## Transition
 
-A transition is a special type that allows you to build up a full set with different sample sets/patches. When triggered an optional sample can be played once while the ui for the new patch is loaded, any other playing samples are stopped immediately:
+A transition is a special type that allows you to build up a full set with different sample sets/patches. When triggered an optional sample can be played once while the ui for the new patch is loaded, any other playing samples are stopped immediately, mode is ignored for this type.
 
 ```json
 {
