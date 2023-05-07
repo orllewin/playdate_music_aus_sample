@@ -1,5 +1,4 @@
 import 'CoracleViews/label_left'
-import 'CoracleViews/label_right'
 import 'Coracle/math'
 
 class('GridToggle').extends(playdate.graphics.sprite)
@@ -13,12 +12,14 @@ local modeHit = 3
 local typeFile = 1
 local typeSample = 2
 local typeEmpty = 3
+local typeTransition = 4
 
 local modePlayImage = playdate.graphics.image.new("Images/play")
 local modeHitImage = playdate.graphics.image.new("Images/hit")
 local modeLoopImage = playdate.graphics.image.new("Images/loop")
 local typeSampleImage = playdate.graphics.image.new("Images/sample")
 local typeFileImage = playdate.graphics.image.new("Images/file")
+local typeTransitionImage = playdate.graphics.image.new("Images/transition")
 
 function GridToggle:init(sample, x, y, width, height, active, listener)
 	GridToggle.super.init(self)
@@ -43,15 +44,22 @@ function GridToggle:init(sample, x, y, width, height, active, listener)
 	
 	if sample.image ~= nil then
 		local sampleImage = playdate.graphics.image.new(sample.image)
-		local sW, sH = sampleImage:getSize()
 		
-		if sW > sH then
-			--scale on width
-			local scaledSampleImage = sampleImage:scaledImage(width/sW)
-			self.sampleSprite = playdate.graphics.sprite.new(scaledSampleImage)
+		if sample.imageScale == nil then
+			local sW, sH = sampleImage:getSize()
+			
+			if sW > sH then
+				--scale on width
+				local scaledSampleImage = sampleImage:scaledImage(width/sW)
+				self.sampleSprite = playdate.graphics.sprite.new(scaledSampleImage)
+			else
+				--scale on height
+				local scaledSampleImage = sampleImage:scaledImage(height/sH)
+				self.sampleSprite = playdate.graphics.sprite.new(scaledSampleImage)
+			end
+			
 		else
-			--scale on height
-			local scaledSampleImage = sampleImage:scaledImage(height/sH)
+			local scaledSampleImage = sampleImage:scaledImage(sample.imageScale)
 			self.sampleSprite = playdate.graphics.sprite.new(scaledSampleImage)
 		end
 		
@@ -84,12 +92,14 @@ function GridToggle:init(sample, x, y, width, height, active, listener)
 			
 			self.cancelling = false
 		end)
-		
 	elseif sample.type == 'sample' then
 		self.type = typeSample
 		self.sample = playdate.sound.sampleplayer.new(self.path)
 		self.length = self.sample:getLength()
 		assert(self.sample ~= nil)
+	elseif sample.type ==  'transition' then
+		self.type = typeTransition
+		
 	end
 
 	self.xx = x
@@ -132,18 +142,41 @@ function GridToggle:init(sample, x, y, width, height, active, listener)
 		if sample.type == 'file' then
 			self.typeSprite = playdate.graphics.sprite.new(typeFileImage)
 			self.typeSprite:moveTo(x + width/2 - 10, y + height/2 - 10)
+			self.typeSprite:setScale(0.25)
+			self.typeSprite:add()
 		elseif sample.type == 'sample' then
 			self.typeSprite = playdate.graphics.sprite.new(typeSampleImage)
 			self.typeSprite:moveTo(x + width/2 - 12, y + height/2 - 10)
-		end
-
-		if self.typeSprite ~= nil then
 			self.typeSprite:setScale(0.25)
+			self.typeSprite:add()
+		elseif sample.type == 'transition' then
+			self.typeSprite = playdate.graphics.sprite.new(typeTransitionImage)
+			self.transitionPath = sample.path
+			self.nextPatch = sample.next
+			self.typeSprite:moveTo(x + width/2 - 13, y + height/2 - 13)
+			self.typeSprite:setScale(0.3333)
 			self.typeSprite:add()
 		end
 	end
-	
+end
 
+function GridToggle:dismiss()
+	--remove views
+	if self.sample ~= nil then
+		self.sample:stop()
+		self.sample = nil
+	end
+	
+	if self.player ~= nil then
+		self.player:stop()
+		self.player = nil
+	end
+	
+	if self.typeSprite ~= nil then self.typeSprite:remove() end
+	if self.modeSprite ~= nil then self.modeSprite:remove() end
+	if self.sampleSprite ~= nil then self.sampleSprite:remove() end
+	if self.label ~= nil then self.label:remove() end
+	self:remove()
 end
 
 function GridToggle:setFocus(focus)
@@ -161,15 +194,17 @@ end
 
 function GridToggle:update()
 	if self.type == typeFile then
-		if self.player:isPlaying() then
+		if self.player:isPlaying() and self.player ~= nil then
 			local elapsed = self.player:getOffset()
+			if elapsed <= 0 then return end
 			local elapsedWidth = map(elapsed, 0, self.length, 0, self.width)
 			playdate.graphics.setColor(playdate.graphics.kColorXOR)
 			playdate.graphics.fillRoundRect(self.x - self.width/2 + 1, self.y - self.height/2 + 1, math.max(1, elapsedWidth - 3), self.height - 3, cornerRad+1) 
 		end
-	elseif self.type == typeSample then
+	elseif self.type == typeSample and self.sample ~= nil then
 		if self.sample:isPlaying() then
 			local elapsed = self.sample:getOffset()
+			if elapsed <= 0 then return end
 			local elapsedWidth = map(elapsed, 0, self.length, 0, self.width)
 			playdate.graphics.setColor(playdate.graphics.kColorXOR)
 			playdate.graphics.fillRoundRect(self.x - self.width/2 + 1, self.y - self.height/2 + 1, math.max(1, elapsedWidth - 3), self.height - 3, cornerRad+1) 
@@ -196,7 +231,6 @@ function GridToggle:tapA()
 			self.cancelling = true
 			self.player:stop()
 			if self.mode == modeHit then
-				print("RETRIGGGGGGGGGGER")
 				self.player:play()
 			end
 		else 
@@ -212,6 +246,9 @@ function GridToggle:tapA()
 		else 
 			self.sample:play()
 		end
+		
+	elseif self.type == typeTransition then
+		mainTransition(self.transitionPath, self.nextPatch)
 	end
 		
 	self.listener(self.active)

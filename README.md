@@ -26,7 +26,7 @@ Example sample object:
 	"image": "/Images/down",
 	"key": "down",
 	"volume": 0.75,
-	"pitch": 1
+	"rate": 1
 }
 ```
 
@@ -37,7 +37,7 @@ Example sample object:
 * `image`: String _optional_ - path to an image in the .pda directory
 * `key`: String _optional_ - one of `left`, `right`, `up`, `down`, `a`, `b`
 * `volume`: Float _optional_ - 0.0 to 1.0, default is 1.0
-* `pitch`: Float _optional_ - playback rate in range 0.0 to 1.0, default is 1.0
+* `rate`: Float _optional_ - playback rate in range 0.0 to 1.0, default is 1.0
 
 ## Type
 
@@ -62,7 +62,7 @@ A transition is a special type that allows you to build up a full set with diffe
 	"path": "/UserPatches/set1/interlude",
 	"type": "transition",
 	"image": "/UserPatch/set1/transition_image",
-	"next": "/UserPatches/set2/
+	"next": "/UserPatches/set2/"
 }
 ```
 

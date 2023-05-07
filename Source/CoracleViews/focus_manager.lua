@@ -16,6 +16,18 @@ function FocusManager:init(_unhandledListener, bListener)
 	self.started = false
 end
 
+function FocusManager:dismissAll()
+	for i=1,#self.viewMatrix do
+		local rowViews = #self.viewMatrix[i]
+		for ii=1,rowViews do
+			local view = self.viewMatrix[i][ii]
+			if view.dismiss ~= nil then
+				view:dismiss()
+			end
+		end
+	end
+end
+
 function FocusManager:start()
 	assert(#self.viewMatrix[1] > 0, "You havn't added any views")
 	self.activeRow = 1

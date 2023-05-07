@@ -23,7 +23,10 @@
 			"type": "empty"
 		},
 		{
-			"type": "empty"
+			"title": "> Min",
+			"type": "transition",
+			"path": "/Samples/Loops/85/TL_ElecPiano_85_Am",
+			"next": "Patches/Minimal/config.json"
 		},
 		{
 			"title": "TapeLoop20",

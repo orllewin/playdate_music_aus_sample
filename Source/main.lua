@@ -42,10 +42,22 @@ function showPatch(patch)
 end
 
 function playdate.update()
-	playDialog:update()
+	if playDialog ~= nil and playDialog:isShowing() then playDialog:update() end
 
 	playdate.graphics.sprite.update()
 	playdate.timer.updateTimers()
 	
-	playDialog:updatePost()
+	if playDialog ~= nil and playDialog:isShowing() then playDialog:updatePost() end
+end
+
+function mainTransition(samplePath, patchPath)
+	print("Play global: " .. samplePath)
+	print("Patch path: " .. patchPath)
+	if playDialog ~= nil and playDialog:isShowing() then 
+		playDialog:dismiss() 
+		playDialog = nil
+	end
+	
+	playDialog = PlayDialog()
+	playDialog:show(patchPath)
 end

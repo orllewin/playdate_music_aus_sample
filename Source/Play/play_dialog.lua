@@ -4,7 +4,6 @@ import 'Play/grid_toggle'
 class('PlayDialog').extends(playdate.graphics.sprite)
 
 local graphics <const> = playdate.graphics
-local focusManager = FocusManager()
 
 local liveView1 = nil
 local liveView2 = nil
@@ -50,6 +49,8 @@ function PlayDialog:show(path)
 	self:setImage(background)
 	self:add()
 	
+	self.focusManager = FocusManager()
+	
 	local font = playdate.graphics.font.new("Fonts/font-rains-1x")
 	playdate.graphics.setFont(font)
 	
@@ -79,16 +80,16 @@ function PlayDialog:show(path)
 				elseif sample.key == 'down' then viewD = view
 				end
 			end
-			focusManager:addView(view, r)
+			self.focusManager:addView(view, r)
 		end
 	end
 	
-	focusManager:start()
-	focusManager:push()
+	self.focusManager:start()
+	self.focusManager:push()
 	
 	--live mode by default:
-	focusManager:pop() 
-	playdate.inputHandlers.push(liveInputManager)
+	-- focusManager:pop() 
+	-- playdate.inputHandlers.push(liveInputManager)
 	
 	self.showing = true
 	
@@ -110,11 +111,11 @@ function PlayDialog:update()
 		if position > 0 and position < 180 then
 			--edit mode
 			playdate.inputHandlers.pop()
-			if focusManager:isHandlingInput() == false then focusManager:push() end
+			if self.focusManager:isHandlingInput() == false then self.focusManager:push() end
 		elseif position > 180 and position < 360 then
 			--live mode
-			if focusManager:isHandlingInput() == true then 
-				focusManager:pop() 
+			if self.focusManager:isHandlingInput() == true then 
+				self.focusManager:pop() 
 				playdate.inputHandlers.push(liveInputManager)
 			end
 			
@@ -126,16 +127,16 @@ end
 function PlayDialog:updatePost()
 	if self.showing == false then return end
 
-	for r=1,focusManager:rowCount() do
-		local rowViews = focusManager:getViews(r)
+	for r=1,self.focusManager:rowCount() do
+		local rowViews = self.focusManager:getViews(r)
 		for i=1, #rowViews do
-			local view = focusManager:getView(r, i)
+			local view = self.focusManager:getView(r, i)
 			if view.update ~= nil then view:update() end
 		end
 	end
 end
 
 function PlayDialog:dismiss()
-
+	self.focusManager:dismissAll()
 end
 	

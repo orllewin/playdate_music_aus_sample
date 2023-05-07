@@ -1,0 +1,17 @@
+{
+	"label": "It is happening again",
+	"columns": 1,
+	"rows": 1,
+	"samples": [
+		{
+			"title": "It is happening again",
+			"path": "/Samples/happening_again",
+			"type": "file",
+			"mode": "hit",
+			"key": "b",
+			"image": "/Images/happening_again",
+			"imageScale": 2,
+			"rate": 0.9
+		}
+	]
+}
