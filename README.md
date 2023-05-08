@@ -74,6 +74,11 @@ A transition is a special type that allows you to build up a full set with diffe
 
 [github.com/jaames/playdate-reverse-engineering/blob/main/usb/usb.md](https://github.com/jaames/playdate-reverse-engineering/blob/main/usb/usb.md)
 
+Device needs to be unlocked for serial interface to be opened, the memory address for the 32char unlock key has changed, I don't know if anyone knows the new address (at least no publicly):  
+* https://github.com/ericlewis/playdate-reverse-engineering/commit/e94050c5ad6d3a289cc271609d75544eeca8abfa
+* https://gist.github.com/ericlewis/43d07016275308de11a5519466deea85
+* https://lua-bytecode.github.io/
+
 <hr>
 
 ## Image Asset Attribution

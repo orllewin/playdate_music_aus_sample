@@ -61,6 +61,10 @@ function playdate.update()
 	if playDialog ~= nil and playDialog:isShowing() then playDialog:updatePost() end
 end
 
+function l(message)
+	print("PD > " .. message)
+end
+
 function mainTransition(samplePath, patchPath)
 	print("Play global: " .. samplePath)
 	print("Patch path: " .. patchPath)
