@@ -78,6 +78,8 @@ Device needs to be unlocked for serial interface to be opened, the memory addres
 * https://github.com/ericlewis/playdate-reverse-engineering/commit/e94050c5ad6d3a289cc271609d75544eeca8abfa
 * https://gist.github.com/ericlewis/43d07016275308de11a5519466deea85
 * https://lua-bytecode.github.io/
+* https://jaames.github.io/pd-usb/example-eval.html
+* https://github.com/jaames/pd-usb/blob/main/src/PlaydateDevice.ts#L381
 
 <hr>
 

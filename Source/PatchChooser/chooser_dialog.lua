@@ -29,9 +29,13 @@ function ChooserDialog:show()
 	
 	
 	local patches = initialisePatches()
-	self.list = TextList(patches, 10, 45, 380, 185, 32, nil, function(index, patch) 
-		print("Patch chosen: " .. patch.label .. " at " .. patch.path)
-		if self.onPatch ~= nil then self.onPatch(patch) end
+	self.list = TextList(patches, 10, 42, 380, 210, 32, nil, function(index, patch) 
+		if patch.type ~= nil then
+			-- divider or title
+		else
+			print("Patch chosen: " .. patch.label .. " at " .. patch.path)
+			if self.onPatch ~= nil then self.onPatch(patch) end
+		end
 	end)
 	
 	focusManager:addView(self.list, 1)

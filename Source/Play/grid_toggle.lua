@@ -15,15 +15,15 @@ local typeEmpty = 3
 local typeTransition = 4
 
 local modePlayImage = playdate.graphics.image.new("Images/play")
-local modeHitImage = playdate.graphics.image.new("Images/hit")
+local modeHitImage = playdate.graphics.image.new("Images/empty")
 local modeLoopImage = playdate.graphics.image.new("Images/loop")
 local typeSampleImage = playdate.graphics.image.new("Images/sample")
 local typeFileImage = playdate.graphics.image.new("Images/file")
 local typeTransitionImage = playdate.graphics.image.new("Images/transition")
 
-function GridToggle:init(sample, x, y, width, height, active, listener)
+function GridToggle:init(sample, x, y, width, height, active, isUserPatch, listener)
 	GridToggle.super.init(self)
-	
+		
 	if sample.title ~= nil then
 		self.title = sample.title
 		self.label = LabelLeft(self.title, x - width/2 + 7, y - height/2 + 6)
@@ -75,7 +75,9 @@ function GridToggle:init(sample, x, y, width, height, active, listener)
 		self.type = typeEmpty
 	elseif sample.type == 'file' then
 		self.type = typeFile
+		
 		self.player = playdate.sound.fileplayer.new(self.path)
+		
 		assert(self.player ~= nil)
 		if sample.volume ~= nil then
 			self.player:setVolume(sample.volume)
@@ -95,10 +97,32 @@ function GridToggle:init(sample, x, y, width, height, active, listener)
 	elseif sample.type == 'sample' then
 		self.type = typeSample
 		self.sample = playdate.sound.sampleplayer.new(self.path)
+		
+		print("Loading sample from path: " .. self.path)
 		self.length = self.sample:getLength()
 		assert(self.sample ~= nil)
+		
+		if sample.volume ~= nil then
+			self.sample:setVolume(sample.volume)
+		end
+		
+		if sample.rate ~= nil then
+			self.sample:setRate(sample.rate)
+		end
+		
+		self.sample:setFinishCallback(function(fp) 
+			if self.mode == modeLoop and self.cancelling ~= true then
+				print("Callback retrigger")
+				self.sample:play()
+			end
+			
+			self.cancelling = false
+		end)
+		
 	elseif sample.type ==  'transition' then
 		self.type = typeTransition
+		
+
 		
 	end
 

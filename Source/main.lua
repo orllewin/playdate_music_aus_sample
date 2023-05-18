@@ -65,6 +65,11 @@ function l(message)
 	print("PD > " .. message)
 end
 
+function serialTap(c, r)
+	print("Serial comms received: " .. c .. "x" .. r)
+	if playDialog ~= nil and playDialog:isShowing() then playDialog:serialTap(c, r) end
+end
+
 function mainTransition(samplePath, patchPath)
 	print("Play global: " .. samplePath)
 	print("Patch path: " .. patchPath)

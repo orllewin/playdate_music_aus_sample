@@ -1,3 +1,7 @@
+function startswith(str, start)
+	 return str:sub(1, #start) == start
+end
+
 function endswith(s, ending)
 		return ending == "" or s:sub(-#ending) == ending
 end

@@ -1,3 +1,4 @@
+import 'Coracle/string_utils'
 import 'CoracleViews/focus_manager'
 import 'Play/grid_toggle'
 
@@ -56,6 +57,13 @@ function PlayDialog:show(path)
 	
 	--400x240
 	local config = json.decodeFile(path)
+	print("CONFIG PATH: " .. path)
+	
+	local isUserPatch = false
+	if startswith(path, "UserPatches/") then
+		isUserPatch = true
+	end
+	
 	local columns = config.columns
 	local rows = config.rows
 	local w = math.floor(400/columns)
@@ -67,7 +75,7 @@ function PlayDialog:show(path)
 		for c = 1, columns do
 			local index = ((r-1) * columns) + c
 			local sample = config.samples[index]
-			local view = GridToggle(sample, ((c * w) - w/2), ((r * h) - h/2), w - 5, h - 5, false, function()
+			local view = GridToggle(sample, ((c * w) - w/2), ((r * h) - h/2), w - 5, h - 5, false, isUserPatch, function()
 				
 			end)
 			
@@ -98,6 +106,10 @@ function PlayDialog:show(path)
 	-- fsSprite:moveTo(210, 120)
 	-- fsSprite:add()
 end	
+
+function PlayDialog:serialTap(c, r)
+	self.focusManager:getView(r, c):tapA()
+end
 
 function PlayDialog:isShowing()
 	return self.showing
