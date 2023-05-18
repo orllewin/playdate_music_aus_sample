@@ -1,0 +1,58 @@
+{
+	"label": "Chords Input Triggers A",
+	"columns": 3,
+	"rows": 2,
+	"samples": [
+		{
+			"title": "Low A",
+			"path": "/Samples/Chords1/chords1_1",
+			"type": "sample",
+			"mode": "hit",
+			"key": "b",
+			"image": "/Images/b",
+			"rate": 0.5
+		},
+		{
+			"title": "ChordUp",
+			"path": "/Samples/Chords1/chords1_1",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/up",
+			"key": "up",
+			"rate": 1
+		},
+		{
+			"title": "Low B",
+			"path": "/Samples/Chords1/chords1_2",
+			"type": "sample",
+			"mode": "hit",
+			"key": "a",
+			"image": "/Images/a",
+			"rate": 0.5
+		},
+		{
+			"title": "ChordLeft",
+			"path": "/Samples/Chords1/chords1_2",
+			"type": "sample",
+			"mode": "hit",
+			"key": "left",
+			"image": "/Images/left"
+		},
+		{
+			"title": "ChordDown",
+			"path": "/Samples/Chords1/chords1_3",
+			"type": "sample",
+			"mode": "hit",
+			"key": "down",
+			"image": "/Images/down"
+		},
+		{
+			"title": "ChordRight",
+			"path": "/Samples/Chords1/chords1_4",
+			"type": "sample",
+			"mode": "hit",
+			"key": "right",
+			"image": "/Images/right"
+		}
+	]
+}

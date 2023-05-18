@@ -24,7 +24,7 @@ function ChooserDialog:show()
 	local font = playdate.graphics.font.new("Fonts/pixarlmed")
 	playdate.graphics.setFont(font)
 	
-	self.title = LabelLeft("Beetroot", 10, 10, 0.4)
+	self.title = LabelLeft("Music aus sample", 10, 10, 0.4)
 	
 	
 	
