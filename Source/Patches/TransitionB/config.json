@@ -5,40 +5,31 @@
 	"samples": [
 		{
 			"title": "001",
-			"path": "/Samples/Loops/85/TL_PolyAnaSyn_85_Am",
-			"type": "sample",
-			"mode": "hit",
-			"key": "b",
-			"image": "/Images/b",
-			"imageScale": 1.6
+			"path": "/Samples/Transistion/006",
+			"type": "file",
+			"mode": "hit"
 		},
 		{
 			"title": "002",
-			"path": "/Samples/Loops/85/BeatK01 85-01",
+			"path": "/Samples/Transistion/001",
+			"rate": 0.5,
 			"type": "sample",
-			"mode": "hit",
-			"image": "/Images/up",
-			"imageScale": 1.6,
-			"key": "up",
-			"rate": 1
+			"mode": "hit"
 		},
 		{
 			"title": "003",
-			"path": "/Samples/Loops/85/TL_ElecPiano_85_Am",
+			"path": "/Samples/Transistion/002",
 			"type": "sample",
-			"mode": "hit",
-			"key": "a",
-			"imageScale": 1.6,
-			"image": "/Images/a"
+			"mode": "hit"
 		},
 		{
-			"title": "Go to A",
-			"path": "/Samples/Loops/85/BeatK01 85-02",
+			"title": "Back to A",
+			"path": "/Samples/Transistion/007",
 			"type": "transition",
 			"mode": "hit",
 			"key": "left",
 			"imageScale": 1.6,
-			"image": "/Images/left",
+			"image": "/Images/transition_cell",
 			"next": "/Patches/TransitionA/"
 		}
 	]

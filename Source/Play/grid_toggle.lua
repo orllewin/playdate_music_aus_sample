@@ -185,6 +185,7 @@ function GridToggle:init(sample, x, y, width, height, active, isUserPatch, liste
 end
 
 function GridToggle:dismiss()
+	self.cancelling = true
 	--remove views
 	if self.sample ~= nil then
 		self.sample:stop()

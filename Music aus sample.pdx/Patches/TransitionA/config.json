@@ -4,54 +4,43 @@
 	"rows": 2,
 	"samples": [
 		{
-			"title": "Polysyn",
-			"path": "/Samples/Loops/85/TL_PolyAnaSyn_85_Am",
+			"title": "AMB1",
+			"path": "/Samples/Transistion/001",
 			"type": "sample",
-			"mode": "hit",
-			"key": "b",
-			"image": "/Images/b"
+			"mode": "hit"
 		},
 		{
-			"title": "Loop1",
-			"path": "/Samples/Loops/85/BeatK01 85-01",
+			"title": "AMB2",
+			"path": "/Samples/Transistion/002",
 			"type": "sample",
-			"mode": "hit",
-			"image": "/Images/up",
-			"key": "up",
-			"rate": 1
+			"mode": "hit"
 		},
 		{
-			"title": "Piano",
-			"path": "/Samples/Loops/85/TL_ElecPiano_85_Am",
+			"title": "AMB3",
+			"path": "/Samples/Transistion/003",
 			"type": "sample",
-			"mode": "hit",
-			"key": "a",
-			"image": "/Images/a"
+			"mode": "hit"
 		},
 		{
-			"title": "Loop2",
-			"path": "/Samples/Loops/85/BeatK01 85-02",
+			"title": "AMB Bass",
+			"path": "/Samples/Transistion/004",
 			"type": "sample",
-			"mode": "hit",
-			"key": "left",
-			"image": "/Images/left"
+			"mode": "hit"
 		},
 		{
-			"title": "Loop3",
-			"path": "/Samples/Loops/85/BeatK01 85-03",
+			"title": "AMB4",
+			"path": "/Samples/Transistion/005",
 			"type": "sample",
-			"mode": "hit",
-			"key": "down",
-			"image": "/Images/down"
+			"mode": "hit"
 		},
 		{
 			"title": "Go to B",
-			"path": "/Samples/Loops/85/BeatK01 85-02",
+			"path": "/Samples/Transistion/007",
 			"type": "transition",
 			"mode": "hit",
 			"key": "left",
 			"imageScale": 1.6,
-			"image": "/Images/left",
+			"image": "/Images/transition_cell",
 			"next": "/Patches/TransitionB/"
 		}
 	]
