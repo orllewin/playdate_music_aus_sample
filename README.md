@@ -72,7 +72,7 @@ A transition is a special type that allows you to build up a full set with diffe
 
 ## USB
 
-MAS can be controlled by an Android device connected via USB running [Playdate Android Pads](https://github.com/orllewin/playdate_android_pads). This is an experimental feature and could break if Panic turn off the USB serial `eval` method in a future Playdate OS release.
+MAS can be controlled by an Android device connected via USB running [Playdate Android Pads](https://github.com/orllewin/playdate_android_pads). This is an experimental feature and could break if Panic turn off the USB serial `eval` method in a future Playdate OS release. 
 
 
 <hr>
