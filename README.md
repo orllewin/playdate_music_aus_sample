@@ -1,12 +1,12 @@
-# Beetroot
+# Music aus sample
 
 ![](./Source/Images/card.png)
 
-A live drum machine for Playdate.
+MAS is a sample player/live drum machine for Playdate.
 
 ## Creating New Patches
 
-Add custom patches to `/Disk/Data/orllewin.playdate.drum/UserPatches`. Custom patches must be in their own directory and include a `config.json` file. The `samples` array contains sample objects (see below), the array size must equal `columns` x `rows`.
+Add custom patches to `/Disk/Data/orllewin.playdate.musicaussample/UserPatches`. Custom patches must be in their own directory and include a `config.json` file. The `samples` array contains sample objects (see below), the array size must equal `columns` x `rows`.
 
 ```json
 {
@@ -70,16 +70,10 @@ A transition is a special type that allows you to build up a full set with diffe
 }
 ```
 
-## The future: USB
+## USB
 
-[github.com/jaames/playdate-reverse-engineering/blob/main/usb/usb.md](https://github.com/jaames/playdate-reverse-engineering/blob/main/usb/usb.md)
+MAS can be controlled by an Android device connected via USB running [Playdate Android Pads](https://github.com/orllewin/playdate_android_pads). This is an experimental feature and could break if Panic turn off the USB serial `eval` method in a future Playdate OS release.
 
-Device needs to be unlocked for serial interface to be opened, the memory address for the 32char unlock key has changed, I don't know if anyone knows the new address (at least no publicly):  
-* https://github.com/ericlewis/playdate-reverse-engineering/commit/e94050c5ad6d3a289cc271609d75544eeca8abfa
-* https://gist.github.com/ericlewis/43d07016275308de11a5519466deea85
-* https://lua-bytecode.github.io/
-* https://jaames.github.io/pd-usb/example-eval.html
-* https://github.com/jaames/pd-usb/blob/main/src/PlaydateDevice.ts#L381
 
 <hr>
 
