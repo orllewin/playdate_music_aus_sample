@@ -45,6 +45,11 @@ function PlayDialog:init()
 end
 
 function PlayDialog:show(path)
+	
+	if endswith(path, "config.json") == false then
+		path = path .. "config.json"
+	end
+	
 	local background = graphics.image.new(400, 240, graphics.kColorWhite)
 	self:moveTo(200, 120)
 	self:setImage(background)
@@ -150,5 +155,6 @@ end
 
 function PlayDialog:dismiss()
 	self.focusManager:dismissAll()
+	self.focusManager:pop() 
 end
 	

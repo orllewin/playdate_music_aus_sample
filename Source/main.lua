@@ -10,6 +10,8 @@ initialiseUserPatchDir()
 playdate.setCrankSoundsDisabled(true)
 
 local graphics <const> = playdate.graphics
+local playDialog = nil
+local transitionPlayer = playdate.sound.fileplayer.new()
 
 graphics.sprite.setBackgroundDrawingCallback(function(x, y, width, height)
 	playdate.graphics.setColor(playdate.graphics.kColorWhite)
@@ -33,7 +35,6 @@ local menuItem, error = menu:addMenuItem("Patches", function()
 		if playDialog ~= nil and playDialog:isShowing() then 
 			playDialog:dismiss() 
 			playDialog = nil
-			playDialog = PlayDialog()
 		end
 		chooserDialog = ChooserDialog(function(patch) 
 			showPatch(patch)
@@ -41,7 +42,12 @@ local menuItem, error = menu:addMenuItem("Patches", function()
 		chooserDialog:show()
 end)
 
-local playDialog = PlayDialog()
+local invertMenuItem, error = menu:addMenuItem("Invert screen", function()
+		inverted = not inverted
+		playdate.display.setInverted(inverted)
+end)
+
+
 
 
 
@@ -49,6 +55,7 @@ function showPatch(patch)
 	print("main.lua - patch chosen: " .. patch.path)
 	chooserDialog:dismiss()
 	chooserDialog = nil
+	playDialog = PlayDialog()
 	playDialog:show(patch.path)
 end
 
@@ -72,6 +79,20 @@ end
 
 function mainTransition(samplePath, patchPath)
 	print("Play global: " .. samplePath)
+	
+	if samplePath ~= nil then
+		if transitionPlayer:isPlaying() then
+			transitionPlayer:stop()
+		end
+		
+		transitionPlayer:load(samplePath)
+		transitionPlayer:play()
+	
+	end
+	
+	
+	
+	
 	print("Patch path: " .. patchPath)
 	if playDialog ~= nil and playDialog:isShowing() then 
 		playDialog:dismiss() 

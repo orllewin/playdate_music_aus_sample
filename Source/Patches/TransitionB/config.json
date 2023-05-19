@@ -1,0 +1,45 @@
+{
+	"label": "Transition Demo B",
+	"columns": 4,
+	"rows": 1,
+	"samples": [
+		{
+			"title": "001",
+			"path": "/Samples/Loops/85/TL_PolyAnaSyn_85_Am",
+			"type": "sample",
+			"mode": "hit",
+			"key": "b",
+			"image": "/Images/b",
+			"imageScale": 1.6
+		},
+		{
+			"title": "002",
+			"path": "/Samples/Loops/85/BeatK01 85-01",
+			"type": "sample",
+			"mode": "hit",
+			"image": "/Images/up",
+			"imageScale": 1.6,
+			"key": "up",
+			"rate": 1
+		},
+		{
+			"title": "003",
+			"path": "/Samples/Loops/85/TL_ElecPiano_85_Am",
+			"type": "sample",
+			"mode": "hit",
+			"key": "a",
+			"imageScale": 1.6,
+			"image": "/Images/a"
+		},
+		{
+			"title": "Go to A",
+			"path": "/Samples/Loops/85/BeatK01 85-02",
+			"type": "transition",
+			"mode": "hit",
+			"key": "left",
+			"imageScale": 1.6,
+			"image": "/Images/left",
+			"next": "/Patches/TransitionA/"
+		}
+	]
+}

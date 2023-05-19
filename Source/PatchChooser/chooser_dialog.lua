@@ -7,7 +7,6 @@ import 'file_io'
 class('ChooserDialog').extends(playdate.graphics.sprite)
 
 local graphics <const> = playdate.graphics
-local focusManager = FocusManager()
 
 function ChooserDialog:init(onPatch)
 	ChooserDialog.super.init(self)
@@ -16,6 +15,9 @@ function ChooserDialog:init(onPatch)
 end
 
 function ChooserDialog:show()
+	
+	self.focusManager = FocusManager()
+	
 	local background = graphics.image.new(400, 240, graphics.kColorWhite)
 	self:moveTo(200, 120)
 	self:setImage(background)
@@ -38,15 +40,15 @@ function ChooserDialog:show()
 		end
 	end)
 	
-	focusManager:addView(self.list, 1)
-	focusManager:start()
-	focusManager:push()
+	self.focusManager:addView(self.list, 1)
+	self.focusManager:start()
+	self.focusManager:push()
 
 	self.div = DividerHorizontal(5, 35, 390, 0.4)
 end
 
 function ChooserDialog:dismiss()
-	focusManager:getFocusedView():removeAll()
+	self.focusManager:getFocusedView():removeAll()
 	self.title:remove()
 	self:remove()
 end
