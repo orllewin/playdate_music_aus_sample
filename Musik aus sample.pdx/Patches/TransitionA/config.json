@@ -1,0 +1,47 @@
+{
+	"label": "Transition Demo A",
+	"columns": 3,
+	"rows": 2,
+	"samples": [
+		{
+			"title": "AMB1",
+			"path": "/Samples/Transistion/001",
+			"type": "sample",
+			"mode": "hit"
+		},
+		{
+			"title": "AMB2",
+			"path": "/Samples/Transistion/002",
+			"type": "sample",
+			"mode": "hit"
+		},
+		{
+			"title": "AMB3",
+			"path": "/Samples/Transistion/003",
+			"type": "sample",
+			"mode": "hit"
+		},
+		{
+			"title": "AMB Bass",
+			"path": "/Samples/Transistion/004",
+			"type": "sample",
+			"mode": "hit"
+		},
+		{
+			"title": "AMB4",
+			"path": "/Samples/Transistion/005",
+			"type": "sample",
+			"mode": "hit"
+		},
+		{
+			"title": "Go to B",
+			"path": "/Samples/Transistion/007",
+			"type": "transition",
+			"mode": "hit",
+			"key": "left",
+			"imageScale": 1.6,
+			"image": "/Images/transition_cell",
+			"next": "/Patches/TransitionB/"
+		}
+	]
+}

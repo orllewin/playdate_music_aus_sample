@@ -1,0 +1,9 @@
+name=Musik aus sample
+author=Orllewin
+description=A sample playback machine.
+bundleID=orllewin.playdate.musikaussample
+version=1.0.1
+buildNumber=2
+imagePath=Images/card.png
+pdxversion=11300
+buildtime=737826618

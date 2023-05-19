@@ -1,7 +1,7 @@
-name=Music aus sample
+name=Musik aus sample
 author=Orllewin
 description=A sample playback machine.
-bundleID=orllewin.playdate.musicaussample
-version=1.0.0
-buildNumber=1
+bundleID=orllewin.playdate.musikaussample
+version=1.0.1
+buildNumber=2
 imagePath=Images/card.png
