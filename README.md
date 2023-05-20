@@ -6,7 +6,7 @@ MAS is a sample player/live drum machine for Playdate.
 
 ## Creating New Patches
 
-Add custom patches to `/Disk/Data/orllewin.playdate.musicaussample/UserPatches`. Custom patches must be in their own directory and include a `config.json` file. The `samples` array contains sample objects (see below), the array size must equal `columns` x `rows`.
+Put your Playdate in Disc Mode (Settings > System) and add custom patches to `/Disk/Data/orllewin.playdate.musikaussample/UserPatches`. Custom patches must be in their own directory and include a `config.json` file. The `samples` array contains sample objects (see below), the array size must equal `columns` x `rows`.
 
 ```json
 {
@@ -35,8 +35,8 @@ Example sample object:
 ```
 
 * `title`: String. Not truncated so keep it short
-* `path`: String, path tot he sample within the .pda directory
-* `type`: String: see below. files are streamed from disk. Use sample for anything but long audio files. 
+* `path`: String, path to the sample within the .pda directory, or patch
+* `type`: String: see below. `file` types are streamed from disk. Use `sample` for anything but long audio files. 
 * `mode`: String, the initial mode, can be one of `hit`, `play`, `loop` - see below for specs for each
 * `image`: String _optional_ - path to an image in the .pda directory
 * `key`: String _optional_ - one of `left`, `right`, `up`, `down`, `a`, `b`
